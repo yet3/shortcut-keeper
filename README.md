@@ -9,3 +9,6 @@ Not for use, I just wanted to play around with svelte for the first time. Might 
 - Sqlite3
 - felte
 
+![App image 1](./resources/img-1.png)
+![App image 2](./resources/img-2.png)
+![App image 3](./resources/img-3.png)
