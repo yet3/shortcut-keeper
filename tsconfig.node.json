@@ -1,0 +1,35 @@
+{
+  "extends": [
+    "@electron-toolkit/tsconfig/tsconfig.node.json"
+  ],
+  "include": [
+    "electron.vite.config.*",
+    "./src/main/**/*",
+    "./src/typings/**/*",
+    "./src/preload/**/*",
+    "./src/shared-lib/**/*"
+  ],
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": ".",
+    "checkJs": true,
+    "allowJs": true,
+    "paths": {
+      "@db/*": [
+        "./src/main/db/*"
+      ],
+      "@api/*": [
+        "./src/main/api/*"
+      ],
+      "@preload/*": [
+        "./src/preload/*"
+      ],
+      "@shared-lib/*": [
+        "./src/shared-lib/*"
+      ],
+      "@typings/*": [
+        "./src/typings/*"
+      ],
+    }
+  }
+}

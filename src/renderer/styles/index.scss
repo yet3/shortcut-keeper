@@ -1,0 +1,21 @@
+@use "./button";
+@use "./tag";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	/* tags colors */
+	--tag-bg-fallback: #000000;
+	--tag-fg-fallback: #ffffff;
+
+	--tag-bg-kl8nls2v1: #FAD6A5;
+	--tag-fg-kl8nls2v1: #5F4B8B;
+	--tag-bg-zm1nk20nz: #B3E0C3;
+	--tag-fg-zm1nk20nz: #2E3A34;
+}
+
+html {
+  @apply text-gray-800;
+}

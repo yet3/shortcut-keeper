@@ -1,0 +1,7 @@
+export const SHORTCUT_PARSER_VERSION = 0;
+
+export const KEY_START_SYMBOL = '<'
+export const KEY_END_SYMBOL = '>'
+export const SEPARATOR_CHORD_SYMBOL = '+'
+export const SEPARATOR_SEQ_SYMBOL = ' '
+export const SEPARATOR_SYMBOLS = [SEPARATOR_CHORD_SYMBOL, SEPARATOR_SEQ_SYMBOL]

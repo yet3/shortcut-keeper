@@ -1,0 +1,32 @@
+
+@layer components {
+  .btn-base {
+    @apply rounded w-fit;
+    @apply hover:enabled:brightness-105 active:enabled:brightness-95;
+    @apply disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed;
+  }
+
+  .btn-size-md {
+    @apply py-2 px-4 ;
+  }
+
+  .btn-size-sm {
+    @apply py-1 px-2; 
+  }
+
+  .btn-primary {
+    @apply bg-blue-200/50 text-blue-900;
+  }
+
+  .btn-success {
+    @apply bg-green-200/50 text-green-900;
+  }
+
+  .btn-danger {
+    @apply bg-red-200/50 text-red-900;
+  }
+
+  .btn-outline {
+    @apply border border-gray-300 text-gray-800;
+  }
+}

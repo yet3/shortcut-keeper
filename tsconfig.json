@@ -1,0 +1,50 @@
+{
+  "extends": [
+    "@electron-toolkit/tsconfig/tsconfig.json"
+  ],
+  "include": [
+    "./src/renderer/**/*",
+    "./src/preload/*.d.ts",
+    "./src/typings/**/*",
+    "./src/shared-lib/**/*"
+  ],
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "target": "es2017",
+    "sourceMap": true,
+    "verbatimModuleSyntax": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowImportingTsExtensions": true,
+    "checkJs": true,
+    "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "@common/*": [
+        "./src/renderer/common/*"
+      ],
+      "@modules/*": [
+        "./src/renderer/modules/*"
+      ],
+      "@lib/*": [
+        "./src/renderer/lib/*"
+      ],
+      "@shared-lib/*": [
+        "./src/shared-lib/*"
+      ],
+      "@stores/*": [
+        "./src/renderer/stores/*"
+      ],
+      "@typings/*": [
+        "./src/typings/*"
+      ]
+    }
+  },
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ],
+}

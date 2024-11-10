@@ -1,0 +1,29 @@
+CREATE TABLE IF NOT EXISTS tags (
+  id TEXT DEFAULT (uuid4()) PRIMARY KEY NOT NULL,
+  name TEXT NOT NULL,
+  colorId TEXT NOT NULL,
+  createdAt Timestamp DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+
+  UNIQUE(name)
+);
+
+CREATE TABLE IF NOT EXISTS shortcuts (
+  id TEXT DEFAULT (uuid4()) PRIMARY KEY NOT NULL,
+  name TEXT NOT NULL,
+  description TEXT NOT NULL,
+  combination TEXT NOT NULL,
+  parserVersion INT NOT NULL,
+  createdAt Timestamp DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS shortcut_tags (
+  id TEXT DEFAULT (uuid4()) PRIMARY KEY NOT NULL,
+  tagId TEXT NOT NULL,
+  shortcutId TEXT NOT NULL,
+  createdAt Timestamp DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+
+  UNIQUE(tagId, shortcutId),
+  FOREIGN KEY (shortcutId) REFERENCES shortcuts (id),
+  FOREIGN KEY (tagId) REFERENCES tags (id)
+);
+

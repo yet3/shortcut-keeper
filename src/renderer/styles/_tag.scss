@@ -1,0 +1,6 @@
+
+@layer components {
+  .tag-base {
+    @apply text-sm p-1 rounded flex items-center break-all w-fit cursor-default;
+  }
+}
